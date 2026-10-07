@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Toolshed Mini</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Toolshed Mini</h1>
+    <p>A catalog of AI skills, plugins and MCP connectors.</p>
+  </header>
+
+  <main>
+    <div class="controls">
+      <input id="search" type="search" placeholder="Search by name, description or owner" aria-label="Search">
+      <select id="kind" aria-label="Filter by kind">
+        <option value="">All kinds</option>
+        <option value="skill">Skill</option>
+        <option value="plugin">Plugin</option>
+        <option value="mcp-connector">MCP connector</option>
+      </select>
+      <select id="source" aria-label="Filter by source">
+        <option value="">All sources</option>
+        <option value="official">Official</option>
+        <option value="community">Community</option>
+      </select>
+    </div>
+    <p id="count" aria-live="polite"></p>
+    <div id="list" class="grid"></div>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+{
+  "name": "toolshed-mini",
+  "version": "0.1.0",
+  "private": true,
+  "description": "A small catalog of AI skills, plugins and MCP connectors.",
+  "scripts": {
+    "build": "node build-catalog.js",
+    "start": "node serve.js"
+  }
+}

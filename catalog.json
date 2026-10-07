@@ -1,0 +1,74 @@
+[
+  {
+    "id": "brand-voice",
+    "name": "Brand Voice Checker",
+    "kind": "skill",
+    "description": "Checks a draft against the company tone-of-voice guide and suggests edits.",
+    "owner": "Marketing Ops",
+    "version": "0.9.0",
+    "source": "community"
+  },
+  {
+    "id": "calendar-connector",
+    "name": "Calendar Connector",
+    "kind": "mcp-connector",
+    "description": "Lets the assistant read your calendar and find free time. Read-only by default.",
+    "owner": "IT Integrations",
+    "version": "1.1.0",
+    "source": "official"
+  },
+  {
+    "id": "code-review-kit",
+    "name": "Code Review Kit",
+    "kind": "plugin",
+    "description": "Reviews code changes for bugs, security risks and missing tests before you merge.",
+    "owner": "Engineering Excellence",
+    "version": "3.1.0",
+    "source": "official"
+  },
+  {
+    "id": "meeting-notes",
+    "name": "Meeting Notes Summarizer",
+    "kind": "skill",
+    "description": "Turns a raw meeting transcript into decisions, action items and owners.",
+    "owner": "Productivity Team",
+    "version": "2.0.1",
+    "source": "official"
+  },
+  {
+    "id": "pdf-reader",
+    "name": "PDF Reader",
+    "kind": "skill",
+    "description": "Reads PDF files and writes a short summary with the key points and any tables found.",
+    "owner": "Docs Team",
+    "version": "1.2.0",
+    "source": "official"
+  },
+  {
+    "id": "release-planner",
+    "name": "Release Planner",
+    "kind": "plugin",
+    "description": "Builds a release checklist and drafts the stakeholder update from your sprint data.",
+    "owner": "Product Ops",
+    "version": "1.0.0",
+    "source": "community"
+  },
+  {
+    "id": "sql-helper",
+    "name": "SQL Helper",
+    "kind": "plugin",
+    "description": "Adds slash commands that write, explain and speed up SQL queries for common warehouses.",
+    "owner": "Data Platform",
+    "version": "1.5.3",
+    "source": "official"
+  },
+  {
+    "id": "ticket-tracker",
+    "name": "Ticket Tracker Connector",
+    "kind": "mcp-connector",
+    "description": "Connects to a community-maintained ticket system so the assistant can search and update tickets.",
+    "owner": "Open Source Contributors",
+    "version": "0.4.2",
+    "source": "community"
+  }
+]

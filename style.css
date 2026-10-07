@@ -1,0 +1,33 @@
+:root {
+  --bg: #f6f7f9; --card: #fff; --text: #1d2330; --muted: #5c6577; --line: #dde1e8; --accent: #3b5bdb;
+  --official: #e6f4ea; --official-text: #1e6b34; --community: #fff4e0; --community-text: #8a5a00;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #14171d; --card: #1e232c; --text: #e8eaf0; --muted: #9aa3b5; --line: #2f3643; --accent: #7c93f5;
+    --official: #17331f; --official-text: #7fd39a; --community: #3a2d12; --community-text: #f0c66d;
+  }
+}
+* { box-sizing: border-box; }
+body { margin: 0; font-family: system-ui, sans-serif; background: var(--bg); color: var(--text); line-height: 1.5; }
+header, main { max-width: 960px; margin: 0 auto; padding: 0 16px; }
+header { padding-top: 32px; }
+h1 { margin: 0; }
+header p { color: var(--muted); margin: 4px 0 24px; }
+.controls { display: flex; gap: 8px; flex-wrap: wrap; }
+.controls input, .controls select {
+  padding: 10px 12px; font-size: 1rem; border: 1px solid var(--line); border-radius: 8px;
+  background: var(--card); color: var(--text);
+}
+.controls input { flex: 1 1 240px; }
+#count { color: var(--muted); margin: 16px 0 8px; }
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 12px; padding-bottom: 40px; }
+.card { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 16px; }
+.card h2 { font-size: 1.1rem; margin: 0 0 6px; }
+.card p { margin: 0 0 12px; color: var(--muted); }
+.tags { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 10px; }
+.tag { font-size: 0.75rem; padding: 2px 8px; border-radius: 999px; border: 1px solid var(--line); }
+.tag.official { background: var(--official); color: var(--official-text); border-color: transparent; }
+.tag.community { background: var(--community); color: var(--community-text); border-color: transparent; }
+.meta { font-size: 0.85rem; color: var(--muted); }
+.empty { grid-column: 1 / -1; text-align: center; color: var(--muted); padding: 32px 0; }
