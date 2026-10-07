@@ -29,5 +29,6 @@ header p { color: var(--muted); margin: 4px 0 24px; }
 .tag { font-size: 0.75rem; padding: 2px 8px; border-radius: 999px; border: 1px solid var(--line); }
 .tag.official { background: var(--official); color: var(--official-text); border-color: transparent; }
 .tag.community { background: var(--community); color: var(--community-text); border-color: transparent; }
+.chip { font-size: 0.75rem; padding: 1px 8px; border-radius: 4px; background: var(--bg); color: var(--muted); }
 .meta { font-size: 0.85rem; color: var(--muted); }
 .empty { grid-column: 1 / -1; text-align: center; color: var(--muted); padding: 32px 0; }

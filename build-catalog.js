@@ -4,7 +4,7 @@ const fs = require("fs");
 const path = require("path");
 
 const dir = path.join(__dirname, "catalog");
-const required = ["name", "kind", "description", "owner", "version", "source"];
+const required = ["name", "kind", "description", "owner", "version", "source", "tags", "updated"];
 const allowed = {
   kind: ["skill", "plugin", "mcp-connector"],
   source: ["official", "community"],
@@ -25,7 +25,17 @@ function check(item) {
   for (const f of Object.keys(allowed))
     if (item[f] && !allowed[f].includes(item[f]))
       problems.push(`"${f}" must be one of: ${allowed[f].join(", ")}`);
+  if (item.updated) {
+    const d = new Date(item.updated + "T00:00:00Z");
+    if (!/^\d{4}-\d{2}-\d{2}$/.test(item.updated) || isNaN(d) || d.toISOString().slice(0, 10) !== item.updated)
+      problems.push('"updated" must be a real date written as YYYY-MM-DD');
+  }
+  if (item.tags && !splitTags(item.tags).length) problems.push('"tags" needs at least one tag');
   return problems;
+}
+
+function splitTags(text) {
+  return text.split(",").map((t) => t.trim().toLowerCase()).filter(Boolean);
 }
 
 function build() {
@@ -37,8 +47,10 @@ function build() {
     if (problems.length) {
       failed = true;
       console.error(`catalog/${file}: ${problems.join("; ")}`);
-    } else items.push(item);
+    } else items.push({ ...item, tags: splitTags(item.tags) });
   }
+  // Newest first; same date falls back to name so the order is always the same.
+  items.sort((a, b) => b.updated.localeCompare(a.updated) || a.name.localeCompare(b.name));
   if (failed) throw new Error("Catalog has problems (see above). Nothing was built.");
   fs.writeFileSync(path.join(__dirname, "catalog.json"), JSON.stringify(items, null, 2));
   console.log(`Built catalog.json with ${items.length} items.`);

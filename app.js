@@ -15,13 +15,20 @@ function el(tag, className, text) {
   return e;
 }
 
+function formatDate(iso) {
+  return new Date(iso + "T00:00:00Z").toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric", timeZone: "UTC" });
+}
+
 function card(item) {
   const c = el("article", "card");
   c.append(el("h2", "", item.name));
   const tags = el("div", "tags");
   tags.append(el("span", "tag", kindLabels[item.kind] || item.kind));
   tags.append(el("span", `tag ${item.source}`, item.source[0].toUpperCase() + item.source.slice(1)));
-  c.append(tags, el("p", "", item.description), el("div", "meta", `${item.owner} · v${item.version}`));
+  const chips = el("div", "tags");
+  item.tags.forEach((t) => chips.append(el("span", "chip", t)));
+  c.append(tags, el("p", "", item.description), chips,
+    el("div", "meta", `${item.owner} · v${item.version} · Updated ${formatDate(item.updated)}`));
   return c;
 }
 
@@ -30,7 +37,7 @@ function render() {
   const shown = items.filter((i) =>
     (!els.kind.value || i.kind === els.kind.value) &&
     (!els.source.value || i.source === els.source.value) &&
-    (!q || [i.name, i.description, i.owner].some((t) => t.toLowerCase().includes(q)))
+    (!q || [i.name, i.description, i.owner, ...i.tags].some((t) => t.toLowerCase().includes(q)))
   );
   els.count.textContent = `${shown.length} of ${items.length} items`;
   els.list.replaceChildren(...(shown.length ? shown.map(card) : [el("p", "empty", "No items match your search.")]));
