@@ -29,6 +29,16 @@ header p { color: var(--muted); margin: 4px 0 24px; }
 .tag { font-size: 0.75rem; padding: 2px 8px; border-radius: 999px; border: 1px solid var(--line); }
 .tag.official { background: var(--official); color: var(--official-text); border-color: transparent; }
 .tag.community { background: var(--community); color: var(--community-text); border-color: transparent; }
+.tag.status-real { background: var(--accent); color: #fff; border-color: transparent; }
+.tag.status-sample { border-style: dashed; color: var(--muted); }
+.get { margin-top: 12px; border-top: 1px solid var(--line); padding-top: 12px; font-size: 0.9rem; }
+.get summary { display: inline-block; cursor: pointer; padding: 6px 14px; border-radius: 8px; background: var(--accent); color: #fff; font-weight: 600; }
+.get[open] summary { margin-bottom: 10px; }
+.steps { padding-left: 20px; margin: 0 0 8px; }
+.cmdhead { display: flex; justify-content: space-between; align-items: center; margin-top: 8px; }
+.copy { font-size: 0.8rem; padding: 3px 10px; border: 1px solid var(--line); border-radius: 6px; background: var(--card); color: var(--text); cursor: pointer; }
+.get pre { margin: 4px 0 0; padding: 8px; background: var(--bg); border-radius: 6px; white-space: pre-wrap; word-break: break-all; font-size: 0.8rem; }
+.get a { color: var(--accent); }
 .chip { font-size: 0.75rem; padding: 1px 8px; border-radius: 4px; background: var(--bg); color: var(--muted); }
 .meta { font-size: 0.85rem; color: var(--muted); }
 .empty { grid-column: 1 / -1; text-align: center; color: var(--muted); padding: 32px 0; }

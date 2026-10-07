@@ -6,3 +6,4 @@ version: 2.0.1
 source: official
 tags: meetings, summarize, action-items
 updated: 2026-10-02
+status: sample

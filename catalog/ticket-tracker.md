@@ -6,3 +6,4 @@ version: 0.4.2
 source: community
 tags: tickets, support, search
 updated: 2026-08-04
+status: sample

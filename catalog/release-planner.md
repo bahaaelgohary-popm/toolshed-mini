@@ -6,3 +6,4 @@ version: 1.0.0
 source: community
 tags: planning, release, stakeholders
 updated: 2026-06-11
+status: sample

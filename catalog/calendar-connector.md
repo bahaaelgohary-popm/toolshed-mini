@@ -6,3 +6,4 @@ version: 1.1.0
 source: official
 tags: calendar, scheduling, read-only
 updated: 2026-05-19
+status: sample

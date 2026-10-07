@@ -6,3 +6,4 @@ version: 3.1.0
 source: official
 tags: code, security, review
 updated: 2026-09-28
+status: sample

@@ -6,3 +6,4 @@ version: 0.9.0
 source: community
 tags: writing, marketing, style
 updated: 2026-07-21
+status: sample

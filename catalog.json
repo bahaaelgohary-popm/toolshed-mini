@@ -1,5 +1,41 @@
 [
   {
+    "id": "release-notes-writer",
+    "name": "Release Notes Writer",
+    "kind": "skill",
+    "description": "Turns tickets and commits into plain release notes for internal platform users. Breaking changes come first, with what users must do.",
+    "owner": "Bahaa Elgohary",
+    "version": "1.0.0",
+    "source": "community",
+    "tags": [
+      "release-notes",
+      "changelog",
+      "platform",
+      "product-management"
+    ],
+    "updated": "2026-10-07",
+    "status": "real",
+    "path": "skills/release-notes-writer"
+  },
+  {
+    "id": "user-story-checker",
+    "name": "User Story Checker",
+    "kind": "skill",
+    "description": "Checks a user story against INVEST, flags stories too big for one sprint, and writes acceptance criteria and a better version.",
+    "owner": "Bahaa Elgohary",
+    "version": "1.0.0",
+    "source": "community",
+    "tags": [
+      "product-management",
+      "user-stories",
+      "agile",
+      "invest"
+    ],
+    "updated": "2026-10-07",
+    "status": "real",
+    "path": "skills/user-story-checker"
+  },
+  {
     "id": "meeting-notes",
     "name": "Meeting Notes Summarizer",
     "kind": "skill",
@@ -12,7 +48,8 @@
       "summarize",
       "action-items"
     ],
-    "updated": "2026-10-02"
+    "updated": "2026-10-02",
+    "status": "sample"
   },
   {
     "id": "code-review-kit",
@@ -27,7 +64,8 @@
       "security",
       "review"
     ],
-    "updated": "2026-09-28"
+    "updated": "2026-09-28",
+    "status": "sample"
   },
   {
     "id": "pdf-reader",
@@ -42,7 +80,8 @@
       "summarize",
       "documents"
     ],
-    "updated": "2026-09-15"
+    "updated": "2026-09-15",
+    "status": "sample"
   },
   {
     "id": "sql-helper",
@@ -57,7 +96,8 @@
       "data",
       "warehouse"
     ],
-    "updated": "2026-08-30"
+    "updated": "2026-08-30",
+    "status": "sample"
   },
   {
     "id": "ticket-tracker",
@@ -72,7 +112,8 @@
       "support",
       "search"
     ],
-    "updated": "2026-08-04"
+    "updated": "2026-08-04",
+    "status": "sample"
   },
   {
     "id": "brand-voice",
@@ -87,7 +128,8 @@
       "marketing",
       "style"
     ],
-    "updated": "2026-07-21"
+    "updated": "2026-07-21",
+    "status": "sample"
   },
   {
     "id": "release-planner",
@@ -102,7 +144,8 @@
       "release",
       "stakeholders"
     ],
-    "updated": "2026-06-11"
+    "updated": "2026-06-11",
+    "status": "sample"
   },
   {
     "id": "calendar-connector",
@@ -117,6 +160,7 @@
       "scheduling",
       "read-only"
     ],
-    "updated": "2026-05-19"
+    "updated": "2026-05-19",
+    "status": "sample"
   }
 ]

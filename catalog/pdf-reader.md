@@ -6,3 +6,4 @@ version: 1.2.0
 source: official
 tags: pdf, summarize, documents
 updated: 2026-09-15
+status: sample
